@@ -30,6 +30,16 @@ import "core-js/proposals/string-replace-all"
 
 @babel/preset-env は @bable/core とセット使う必要あり。
 
+下記も書かないとエラー
+
+```
+"exclude": [
+  // \\ for Windows, \/ for Mac OS and Linux
+  /node_modules[\\\/]core-js/,
+  /node_modules[\\\/]webpack[\\\/]buildin/,
+],
+```
+
 @babel/preset-envしかないと下記のエラー
 
 ```
